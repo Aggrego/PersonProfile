@@ -1,8 +1,8 @@
 Feature: Initialization of person
 #
 #  Scenario: Creating person
-#    When calling builder "person.fake_build.male" profile without key
-#    Then create "person.fake_build.initial" fragmented data board
+#    When create "person.fake_build.male" profile without key
+#    Then should exist "person.fake_build.initial" fragmented data board
 #    And it should have "faker.uuid" piece
 #    And it should have "faker.first_name" piece
 #    And it should have "faker.middle_name" piece
@@ -10,7 +10,7 @@ Feature: Initialization of person
 #
 #  Scenario: Finalize create person
 #    When calling transformation for person.fake_build.male.initial profile
-#    Then create "person.core_data.final" data board
+#    Then should exist "person.core_data.final" data board
 #    And it should have "uuid" key
 #    And it should have "first_name" key
 #    And it should have "middle_name" key

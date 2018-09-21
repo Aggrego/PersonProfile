@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Aggrego\PersonProfile\Domain\Profile\BoardConstruction;
 
-use Aggrego\Domain\Profile\BoardConstruction\Builder;
+use Aggrego\Domain\Profile\BoardConstruction\Builder as DomainBuilder;
 use Aggrego\Domain\Profile\BoardConstruction\Watchman as DomainWatchman;
 use Aggrego\Domain\Profile\Profile;
 
@@ -15,8 +15,8 @@ class Watchman implements DomainWatchman
         // TODO: Implement isSupported() method.
     }
 
-    public function passBuilder(Profile $profile): Builder
+    public function passBuilder(Profile $profile): DomainBuilder
     {
-        // TODO: Implement passBuilder() method.
+        return new Builder($profile);
     }
 }

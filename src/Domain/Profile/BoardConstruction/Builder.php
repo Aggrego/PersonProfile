@@ -8,9 +8,18 @@ use Aggrego\Domain\Board\Key;
 use Aggrego\Domain\Board\Prototype\Board as BoardPrototype;
 use Aggrego\Domain\Profile\BoardConstruction\Builder as DomainBuilder;
 use Aggrego\Domain\Profile\BoardConstruction\Exception\UnableToBuildBoardException;
+use Aggrego\Domain\Profile\Profile;
 
-class Builder implements DomainBuilder
+abstract class Builder implements DomainBuilder
 {
+    /** @var Profile */
+    private $profile;
+
+    public function __construct(Profile $profile)
+    {
+        $this->profile = $profile;
+    }
+
     /**
      * @param Key $key
      * @return BoardPrototype
