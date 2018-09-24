@@ -4,20 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0849d7aebae87b08420682d0420cfbd",
+    "content-hash": "786f8487a9f00271c8d1478abfea152c",
     "packages": [
+        {
+            "name": "aggrego/aggregate-event-consumer",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/app/AggregateEventConsumer",
+                "reference": "836224ead9c8c6753eb90238ffff3faa3153ce48",
+                "shasum": null
+            },
+            "require": {
+                "aggrego/event-consumer": "dev-master",
+                "beberlei/assert": "^3.0",
+                "composer/semver": "1.4.*",
+                "php": ">=7.1",
+                "timitao/value-object": "dev-master"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^5.0",
+                "wikimedia/composer-merge-plugin": "1.4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aggrego\\AggregateEventConsumer\\": "src/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tomasz Kunicki"
+                }
+            ],
+            "transport-options": {
+                "symlink": true
+            }
+        },
         {
             "name": "aggrego/data-board",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Aggrego/DataBoard.git",
-                "reference": "8fafc155c2497447bea0cdc3e1b9378f2e8b61e4"
+                "reference": "5796e8aff66723f89503a8bf1bb8dcf7e881de82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/DataBoard/zipball/8fafc155c2497447bea0cdc3e1b9378f2e8b61e4",
-                "reference": "8fafc155c2497447bea0cdc3e1b9378f2e8b61e4",
+                "url": "https://api.github.com/repos/Aggrego/DataBoard/zipball/5796e8aff66723f89503a8bf1bb8dcf7e881de82",
+                "reference": "5796e8aff66723f89503a8bf1bb8dcf7e881de82",
                 "shasum": ""
             },
             "require": {
@@ -28,7 +66,8 @@
             "require-dev": {
                 "behat/behat": "^3.4",
                 "phpspec/phpspec": "^5.0",
-                "timitao/behat-symfony-container": "^1.1"
+                "timitao/behat-symfony-container": "^1.1",
+                "wikimedia/composer-merge-plugin": "1.4.*"
             },
             "type": "library",
             "autoload": {
@@ -45,7 +84,7 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2018-09-14T15:32:05+00:00"
+            "time": "2018-09-24T18:46:06+00:00"
         },
         {
             "name": "aggrego/domain",
@@ -53,16 +92,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Aggrego/Domain.git",
-                "reference": "27fd61a21a4db2e0fbc358a25a6f41962362d9dd"
+                "reference": "389186add659c26c0448ceec3464844cc12ddb02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/Domain/zipball/27fd61a21a4db2e0fbc358a25a6f41962362d9dd",
-                "reference": "27fd61a21a4db2e0fbc358a25a6f41962362d9dd",
+                "url": "https://api.github.com/repos/Aggrego/Domain/zipball/389186add659c26c0448ceec3464844cc12ddb02",
+                "reference": "389186add659c26c0448ceec3464844cc12ddb02",
                 "shasum": ""
             },
             "require": {
-                "aggrego/event-store": "dev-master",
+                "aggrego/aggregate-event-consumer": "dev-master",
                 "beberlei/assert": "^3.0",
                 "php": ">=7.1",
                 "ramsey/uuid": "^3.8",
@@ -71,9 +110,10 @@
             "require-dev": {
                 "behat/behat": "^3.4",
                 "phpspec/phpspec": "^5.0",
-                "timitao/behat-symfony-container": "^1.1"
+                "timitao/behat-symfony-container": "^1.1",
+                "wikimedia/composer-merge-plugin": "1.4.*"
             },
-            "type": "domain",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Aggrego\\Domain\\": "src/"
@@ -88,20 +128,20 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2018-09-15T07:50:32+00:00"
+            "time": "2018-09-24T18:39:03+00:00"
         },
         {
-            "name": "aggrego/event-store",
+            "name": "aggrego/event-consumer",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Aggrego/EventStore.git",
-                "reference": "ef5f0a4a5c09ce76db1893f42514a5687fd2767c"
+                "url": "https://github.com/Aggrego/EventConsumer.git",
+                "reference": "610f2844a702c314ee17a5ddc06bce503dc1d7e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/EventStore/zipball/ef5f0a4a5c09ce76db1893f42514a5687fd2767c",
-                "reference": "ef5f0a4a5c09ce76db1893f42514a5687fd2767c",
+                "url": "https://api.github.com/repos/Aggrego/EventConsumer/zipball/610f2844a702c314ee17a5ddc06bce503dc1d7e8",
+                "reference": "610f2844a702c314ee17a5ddc06bce503dc1d7e8",
                 "shasum": ""
             },
             "require": {
@@ -111,12 +151,13 @@
                 "timitao/value-object": "dev-master"
             },
             "require-dev": {
-                "phpspec/phpspec": "^5.0"
+                "phpspec/phpspec": "^5.0",
+                "wikimedia/composer-merge-plugin": "1.4.*"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Aggrego\\EventStore\\": "src/"
+                    "Aggrego\\EventConsumer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -128,20 +169,20 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2018-09-15T07:44:35+00:00"
+            "time": "2018-09-24T18:36:16+00:00"
         },
         {
-            "name": "aggrego/shard-data-board",
+            "name": "aggrego/fragmented-data-board",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Aggrego/ShardDataBoard.git",
-                "reference": "b0daf63aa160f64161120e8a43692fb118101c97"
+                "url": "https://github.com/Aggrego/FragmentedDataBoard.git",
+                "reference": "8c76df50182960b20d5de0057a0196c3dcdfa07f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/ShardDataBoard/zipball/b0daf63aa160f64161120e8a43692fb118101c97",
-                "reference": "b0daf63aa160f64161120e8a43692fb118101c97",
+                "url": "https://api.github.com/repos/Aggrego/FragmentedDataBoard/zipball/8c76df50182960b20d5de0057a0196c3dcdfa07f",
+                "reference": "8c76df50182960b20d5de0057a0196c3dcdfa07f",
                 "shasum": ""
             },
             "require": {
@@ -153,12 +194,13 @@
             "require-dev": {
                 "behat/behat": "^3.4",
                 "phpspec/phpspec": "^5.0",
-                "timitao/behat-symfony-container": "^1.1"
+                "timitao/behat-symfony-container": "^1.1",
+                "wikimedia/composer-merge-plugin": "1.4.*"
             },
-            "type": "domain",
+            "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Aggrego\\ShardDataBoard\\": "src/"
+                    "Aggrego\\FragmentedDataBoard\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -170,7 +212,7 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2018-09-14T15:39:41+00:00"
+            "time": "2018-09-24T18:54:13+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -975,12 +1017,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "b37c5a0659d8a405b820737099cf619b29b3a40e"
+                "reference": "eeb9503bdd0bca26d7d7dcfb87742a9675d3bbcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/b37c5a0659d8a405b820737099cf619b29b3a40e",
-                "reference": "b37c5a0659d8a405b820737099cf619b29b3a40e",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/eeb9503bdd0bca26d7d7dcfb87742a9675d3bbcd",
+                "reference": "eeb9503bdd0bca26d7d7dcfb87742a9675d3bbcd",
                 "shasum": ""
             },
             "require": {
@@ -1048,7 +1090,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2018-07-17T09:51:17+00:00"
+            "time": "2018-09-24T07:40:08+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -1408,12 +1450,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "c505ae123d0debde10384cfca55f34c86d14700e"
+                "reference": "1dcdcb9f6c743eda02e53f1c3d0f6a0ead4e6fc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/c505ae123d0debde10384cfca55f34c86d14700e",
-                "reference": "c505ae123d0debde10384cfca55f34c86d14700e",
+                "url": "https://api.github.com/repos/symfony/config/zipball/1dcdcb9f6c743eda02e53f1c3d0f6a0ead4e6fc2",
+                "reference": "1dcdcb9f6c743eda02e53f1c3d0f6a0ead4e6fc2",
                 "shasum": ""
             },
             "require": {
@@ -1463,7 +1505,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-11T07:53:26+00:00"
+            "time": "2018-09-24T07:37:12+00:00"
         },
         {
             "name": "symfony/console",
@@ -1471,12 +1513,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "c5ca5555e169317f6f13d625a9e35ee89d64b395"
+                "reference": "f7d88a181e92d64ccc1b4a48061d558aafb671d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/c5ca5555e169317f6f13d625a9e35ee89d64b395",
-                "reference": "c5ca5555e169317f6f13d625a9e35ee89d64b395",
+                "url": "https://api.github.com/repos/symfony/console/zipball/f7d88a181e92d64ccc1b4a48061d558aafb671d0",
+                "reference": "f7d88a181e92d64ccc1b4a48061d558aafb671d0",
                 "shasum": ""
             },
             "require": {
@@ -1532,7 +1574,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-16T11:51:03+00:00"
+            "time": "2018-09-24T07:37:12+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -1540,12 +1582,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/contracts.git",
-                "reference": "331569c94809047bd3c86c572e7130515fcec91e"
+                "reference": "070488ad1b6a60cee2a2fce3e855b97f9918306b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/331569c94809047bd3c86c572e7130515fcec91e",
-                "reference": "331569c94809047bd3c86c572e7130515fcec91e",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/070488ad1b6a60cee2a2fce3e855b97f9918306b",
+                "reference": "070488ad1b6a60cee2a2fce3e855b97f9918306b",
                 "shasum": ""
             },
             "require": {
@@ -1557,7 +1599,10 @@
             },
             "suggest": {
                 "psr/cache": "When using the Cache contracts",
-                "psr/container": "When using the Service contracts"
+                "psr/container": "When using the Service contracts",
+                "symfony/cache-contracts-implementation": "",
+                "symfony/service-contracts-implementation": "",
+                "symfony/translation-contracts-implementation": ""
             },
             "type": "library",
             "extra": {
@@ -1597,7 +1642,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2018-09-17T18:09:31+00:00"
+            "time": "2018-09-20T13:44:19+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -1605,12 +1650,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "36d8af1d4e606e5d680e8fda44b6b2965ab7d037"
+                "reference": "b08e15cd0e34b89e12aefd25cfa390c6a60a0147"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/36d8af1d4e606e5d680e8fda44b6b2965ab7d037",
-                "reference": "36d8af1d4e606e5d680e8fda44b6b2965ab7d037",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/b08e15cd0e34b89e12aefd25cfa390c6a60a0147",
+                "reference": "b08e15cd0e34b89e12aefd25cfa390c6a60a0147",
                 "shasum": ""
             },
             "require": {
@@ -1626,7 +1671,7 @@
             },
             "provide": {
                 "psr/container-implementation": "1.0",
-                "symfony/service-contracts": "1.0"
+                "symfony/service-contracts-implementation": "1.0"
             },
             "require-dev": {
                 "symfony/config": "~4.2",
@@ -1670,7 +1715,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-18T16:51:13+00:00"
+            "time": "2018-09-24T07:37:12+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1792,12 +1837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "241d96d1f8455265195def65786f2aaec5b4d5f0"
+                "reference": "e4f1ce8e2f10b4f8b37d32125e1720bea6851096"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/241d96d1f8455265195def65786f2aaec5b4d5f0",
-                "reference": "241d96d1f8455265195def65786f2aaec5b4d5f0",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/e4f1ce8e2f10b4f8b37d32125e1720bea6851096",
+                "reference": "e4f1ce8e2f10b4f8b37d32125e1720bea6851096",
                 "shasum": ""
             },
             "require": {
@@ -1833,7 +1878,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-09T18:06:02+00:00"
+            "time": "2018-09-21T12:51:02+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1841,12 +1886,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8"
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d0cd638f4634c16d8df4508e847f14e9e43168b8",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
                 "shasum": ""
             },
             "require": {
@@ -1892,7 +1937,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/process",
@@ -1900,12 +1945,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "ab568b628728e860f70bc3b9af95496ba6d9d6b0"
+                "reference": "a54c3e0b52d77fa52ce8ada54901f047c62b70e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/ab568b628728e860f70bc3b9af95496ba6d9d6b0",
-                "reference": "ab568b628728e860f70bc3b9af95496ba6d9d6b0",
+                "url": "https://api.github.com/repos/symfony/process/zipball/a54c3e0b52d77fa52ce8ada54901f047c62b70e0",
+                "reference": "a54c3e0b52d77fa52ce8ada54901f047c62b70e0",
                 "shasum": ""
             },
             "require": {
@@ -1941,7 +1986,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-10T07:26:34+00:00"
+            "time": "2018-09-24T07:37:12+00:00"
         },
         {
             "name": "symfony/translation",
@@ -1949,12 +1994,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "6897471d454acf06f8483879654586b594e83fad"
+                "reference": "0c02f5b9d9451a631c0b2df213f95d18bf8ae4b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/6897471d454acf06f8483879654586b594e83fad",
-                "reference": "6897471d454acf06f8483879654586b594e83fad",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/0c02f5b9d9451a631c0b2df213f95d18bf8ae4b1",
+                "reference": "0c02f5b9d9451a631c0b2df213f95d18bf8ae4b1",
                 "shasum": ""
             },
             "require": {
@@ -1968,7 +2013,7 @@
                 "symfony/yaml": "<3.4"
             },
             "provide": {
-                "symfony/translation-contracts": "1.0"
+                "symfony/translation-contracts-implementation": "1.0"
             },
             "require-dev": {
                 "psr/log": "~1.0",
@@ -2014,7 +2059,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-11T07:53:26+00:00"
+            "time": "2018-09-21T12:51:02+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -2022,12 +2067,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "dce4103732c317c9a141e93501808162cc2cb0d0"
+                "reference": "07a9881ca56421f7c1a9e5cc5c9042c12188f10a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/dce4103732c317c9a141e93501808162cc2cb0d0",
-                "reference": "dce4103732c317c9a141e93501808162cc2cb0d0",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/07a9881ca56421f7c1a9e5cc5c9042c12188f10a",
+                "reference": "07a9881ca56421f7c1a9e5cc5c9042c12188f10a",
                 "shasum": ""
             },
             "require": {
@@ -2073,7 +2118,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-10T07:26:34+00:00"
+            "time": "2018-09-21T11:02:43+00:00"
         },
         {
             "name": "timitao/behat-symfony-container",
@@ -2168,6 +2213,55 @@
                 "validate"
             ],
             "time": "2018-05-29T14:25:02+00:00"
+        },
+        {
+            "name": "wikimedia/composer-merge-plugin",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
+                "reference": "81c6ac72a24a67383419c7eb9aa2b3437f2ab100",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0.0",
+                "jakub-onderka/php-parallel-lint": "~0.8",
+                "phpunit/phpunit": "~4.8|~5.0",
+                "squizlabs/php_codesniffer": "~2.1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                },
+                "class": "Wikimedia\\Composer\\MergePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Davis",
+                    "email": "bd808@wikimedia.org"
+                }
+            ],
+            "description": "Composer plugin to merge multiple composer.json files",
+            "time": "2017-04-25T02:31:25+00:00"
         }
     ],
     "aliases": [],
@@ -2175,7 +2269,7 @@
     "stability-flags": {
         "aggrego/domain": 20,
         "aggrego/data-board": 20,
-        "aggrego/shard-data-board": 20
+        "aggrego/fragmented-data-board": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

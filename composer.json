@@ -14,9 +14,10 @@
     "php": ">=7.1",
     "aggrego/domain": "dev-master",
     "aggrego/data-board": "dev-master",
-    "aggrego/shard-data-board": "dev-master"
+    "aggrego/fragmented-data-board": "dev-master"
   },
   "require-dev": {
+    "wikimedia/composer-merge-plugin": "1.4.*",
     "behat/behat": "^3.4",
     "timitao/behat-symfony-container": "^1.1",
     "phpspec/phpspec": "^5.0"
